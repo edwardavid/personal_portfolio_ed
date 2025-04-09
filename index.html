@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Portfolio | Full Stack Developer & Ethical Hacker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="show-es no-js">
+    <div id="language-toggle">
+        <span class="es-content">EN</span>
+        <span class="en-content">ES</span>
+    </div>
+    
+    <noscript>
+        <div style="padding: 20px; background-color: #ff5555; color: white; text-align: center; position: fixed; bottom: 0; width: 100%; z-index: 9999;">
+            Este portfolio funciona mejor con JavaScript habilitado. / This portfolio works best with JavaScript enabled.
+        </div>
+    </noscript>
+
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <div class="cat-container">
+        <div class="cat">
+            <div class="cat-head">
+                <div class="cat-ear cat-ear-left"></div>
+                <div class="cat-ear cat-ear-right"></div>
+                <div class="cat-eye cat-eye-left"></div>
+                <div class="cat-eye cat-eye-right"></div>
+                <div class="cat-nose"></div>
+            </div>
+            <div class="cat-body"></div>
+            <div class="cat-tail"></div>
+        </div>
+    </div>
+
+    <!-- Menú hamburguesa para móviles -->
+    <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav>
+        <div class="container">
+            <ul id="nav-menu">
+                <li><a href="#home" class="es-content">Inicio</a><a href="#home" class="en-content">Home</a></li>
+                <li><a href="#about" class="es-content">Sobre Mí</a><a href="#about" class="en-content">About</a></li>
+                <li><a href="#skills" class="es-content">Habilidades</a><a href="#skills" class="en-content">Skills</a></li>
+                <li><a href="#experience" class="es-content">Experiencia</a><a href="#experience" class="en-content">Experience</a></li>
+                <li><a href="#projects" class="es-content">Proyectos</a><a href="#projects" class="en-content">Projects</a></li>
+                <li><a href="#contact" class="es-content">Contacto</a><a href="#contact" class="en-content">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <h1 class="title es-content">Desarrollador <span class="animated-accent">Full Stack</span> & <span class="animated-accent">Ciberseguridad</span></h1>
+        <h1 class="title en-content"><span class="animated-accent">Full Stack</span> Developer & <span class="animated-accent">Cybersecurity</span></h1>
+        <p class="subtitle es-content">Especializado en desarrollo web, multiplataforma y hacking ético</p>
+        <p class="subtitle en-content">Specialized in web development, multi-platform and ethical hacking</p>
+    </header>
+
+    <section id="about" class="grid-section">
+        <div class="container">
+            <h2 class="section-title es-content">Sobre Mí</h2>
+            <h2 class="section-title en-content">About Me</h2>
+            
+            <div class="card">
+                <div class="es-content">
+                    <p>Soy un desarrollador Full Stack con experiencia en una amplia gama de tecnologías front-end y back-end. Actualmente estoy ampliando mis conocimientos en ciberseguridad y hacking ético para complementar mi perfil técnico.</p>
+                    
+                    <p>Mi experiencia como Trader Deportivo me ha proporcionado valiosas habilidades en análisis de datos, gestión de riesgos y toma de decisiones bajo presión, que ahora aplico en mis proyectos de desarrollo.</p>
+                    
+                    <p>Me apasiona crear aplicaciones robustas, seguras y con excelente experiencia de usuario. Mi enfoque combina la creatividad del desarrollo front-end con la solidez técnica del back-end, siempre teniendo en cuenta las mejores prácticas de seguridad.</p>
+                </div>
+                
+                <div class="en-content">
+                    <p>I am a Full Stack developer with experience in a wide range of front-end and back-end technologies. I'm currently expanding my knowledge in cybersecurity and ethical hacking to complement my technical profile.</p>
+                    
+                    <p>My experience as a Sports Trader has provided me with valuable skills in data analysis, risk management, and decision-making under pressure, which I now apply to my development projects.</p>
+                    
+                    <p>I'm passionate about creating robust, secure applications with excellent user experience. My approach combines the creativity of front-end development with the technical strength of back-end, always considering security best practices.</p>
+                </div>
+                
+                <div class="terminal">
+                    <div class="terminal-content es-content">
+                        <span style="color: var(--accent-color)">$ </span>whoami
+                        <span style="color: #ccc">developer@fullstack:~$ </span>Desarrollador Full Stack & Especialista en Ciberseguridad
+                        <span style="color: var(--accent-color)">$ </span>cat /etc/motd
+                        <span style="color: #ccc">
+"La seguridad no es un producto, sino un proceso." -Bruce Schneier
+                        </span>
+                        <span style="color: var(--accent-color)">$ </span>_<span class="cursor"></span>
+                    </div>
+                    
+                    <div class="terminal-content en-content">
+                        <span style="color: var(--accent-color)">$ </span>whoami
+                        <span style="color: #ccc">developer@fullstack:~$ </span>Full Stack Developer & Cybersecurity Specialist
+                        <span style="color: var(--accent-color)">$ </span>cat /etc/motd
+                        <span style="color: #ccc">
+"Security is not a product, but a process." -Bruce Schneier
+                        </span>
+                        <span style="color: var(--accent-color)">$ </span>_<span class="cursor"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="grid-section">
+        <div class="container">
+            <h2 class="section-title es-content">Habilidades Técnicas</h2>
+            <h2 class="section-title en-content">Technical Skills</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3 class="es-content">Desarrollo Front-End</h3>
+                    <h3 class="en-content">Front-End Development</h3>
+                    <div class="skill-container">
+                        <span class="skill">HTML5</span>
+                        <span class="skill">CSS3</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Angular</span>
+                        <span class="skill">Bootstrap</span>
+                        <span class="skill">Figma</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="es-content">Desarrollo Back-End</h3>
+                    <h3 class="en-content">Back-End Development</h3>
+                    <div class="skill-container">
+                        <span class="skill">NodeJS</span>
+                        <span class="skill">PHP</span>
+                        <span class="skill">Symfony</span>
+                        <span class="skill">Java</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">C#</span>
+                        <span class="skill">.NET</span>
+                        <span class="skill">C++</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="es-content">Bases de Datos</h3>
+                    <h3 class="en-content">Databases</h3>
+                    <div class="skill-container">
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">SQL</span>
+                        <span class="skill">MySQL</span>
+                        <span class="skill">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="es-content">Ciberseguridad</h3>
+                    <h3 class="en-content">Cybersecurity</h3>
+                    <div class="skill-container">
+                        <span class="skill">Hacking Ético</span>
+                        <span class="skill">Ethical Hacking</span>
+                        <span class="skill">Pentesting</span>
+                        <span class="skill">OSINT</span>
+                        <span class="skill">Cloud Security</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="es-content">Análisis de Datos</h3>
+                    <h3 class="en-content">Data Analysis</h3>
+                    <div class="skill-container">
+                        <span class="skill">Web Scraping</span>
+                        <span class="skill">BeautifulSoup</span>
+                        <span class="skill">Scrapy</span>
+                        <span class="skill">Selenium</span>
+                        <span class="skill">Algoritmos de Predicción</span>
+                        <span class="skill">Prediction Algorithms</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="es-content">Otras Habilidades</h3>
+                    <h3 class="en-content">Other Skills</h3>
+                    <div class="skill-container">
+                        <span class="skill">Git</span>
+                        <span class="skill">Agile</span>
+                        <span class="skill">Scrum</span>
+                        <span class="skill">Trading</span>
+                        <span class="skill">Análisis Deportivo</span>
+                        <span class="skill">Sports Analysis</span>
+                        <span class="skill">Gestión de Riesgos</span>
+                        <span class="skill">Risk Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="grid-section">
+        <div class="container">
+            <h2 class="section-title es-content">Experiencia Profesional</h2>
+            <h2 class="section-title en-content">Professional Experience</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3 class="es-content">Desarrollador Full Stack (Freelance)</h3>
+                    <h3 class="en-content">Full Stack Developer (Freelance)</h3>
+                    <p class="es-content">Madrid | 02/2023 - Presente</p>
+                    <p class="en-content">Madrid | 02/2023 - Present</p>
+                    <div class="es-content">
+                        <p>Desarrollo de proyectos profesionales y académicos utilizando múltiples tecnologías:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li>Desarrollo front-end con HTML, CSS, JavaScript, Angular, React y Bootstrap</li>
+                            <li>Desarrollo back-end con NodeJS, PHP, Symfony, Java, C++, .NET y C#</li>
+                            <li>Gestión de bases de datos con MongoDB y SQL</li>
+                            <li>Diseño UI/UX con Figma</li>
+                            <li>Desarrollo de software en Python para web scraping y análisis de datos</li>
+                            <li>Implementación de algoritmos de probabilidad y predicción</li>
+                            <li>Optimización y automatización de procesos</li>
+                        </ul>
+                    </div>
+                    <div class="en-content">
+                        <p>Development of professional and academic projects using multiple technologies:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li>Front-end development with HTML, CSS, JavaScript, Angular, React, and Bootstrap</li>
+                            <li>Back-end development with NodeJS, PHP, Symfony, Java, C++, .NET, and C#</li>
+                            <li>Database management with MongoDB and SQL</li>
+                            <li>UI/UX design with Figma</li>
+                            <li>Python software development for web scraping and data analysis</li>
+                            <li>Implementation of probability and prediction algorithms</li>
+                            <li>Process optimization and automation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="es-content">Trader Deportivo</h3>
+                    <h3 class="en-content">Sports Trader</h3>
+                    <p>2020 - 2023</p>
+                    <div class="es-content">
+                        <p>Profesional en arbitraje y análisis deportivo:</p>
+                        <ul style="margin-left: 20px;">
+                            <li>Análisis estadístico de eventos deportivos</li>
+                            <li>Implementación de estrategias de Matched Betting</li>
+                            <li>Gestión de riesgo y toma de decisiones en tiempo real</li>
+                            <li>Desarrollo de modelos de predicción</li>
+                        </ul>
+                    </div>
+                    <div class="en-content">
+                        <p>Professional in arbitrage and sports analysis:</p>
+                        <ul style="margin-left: 20px;">
+                            <li>Statistical analysis of sporting events</li>
+                            <li>Implementation of Matched Betting strategies</li>
+                            <li>Risk management and real-time decision making</li>
+                            <li>Development of prediction models</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="grid-section">
+        <div class="container">
+            <h2 class="section-title es-content">Formación</h2>
+            <h2 class="section-title en-content">Education</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3 class="es-content">Ciberseguridad, Hacking Ético y Cloud</h3>
+                    <h3 class="en-content">Cybersecurity, Ethical Hacking and Cloud</h3>
+                    <p>01/2025 - Presente/Present</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="es-content">Full Stack Developer</h3>
+                    <h3 class="en-content">Full Stack Developer</h3>
+                    <p>07/2023</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="es-content">Introducción a la Ciberseguridad</h3>
+                    <h3 class="en-content">Introduction to Cybersecurity</h3>
+                    <p>Cisco, 2024</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="es-content">Arbitraje Deportivo</h3>
+                    <h3 class="en-content">Sports Arbitrage</h3>
+                    <p>Robinsure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="grid-section">
+        <div class="container">
+            <h2 class="section-title es-content">Proyectos</h2>
+            <h2 class="section-title en-content">Projects</h2>
+            
+            <div class="grid">
+                <!-- Project 1: Tres en Raya -->
+                <div class="card">
+                    <h3 class="es-content">Tres en Raya / Tic-Tac-Toe</h3>
+                    <h3 class="en-content">Tic-Tac-Toe Game</h3>
+                    <div class="project-image" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; max-height: 200px; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a;">
+                        <img src="/images/tictactoe.jpt.png" alt="Tres en Raya screenshot" style="width: 100%; height: auto; object-fit: cover;"/>
+                    </div>
+                    <div class="es-content">
+                        <p>Juego clásico de tres en raya con interfaz sencilla y funcional. Incluye sistema de turnos y detección automática de victoria.</p>
+                    </div>
+                    <div class="en-content">
+                        <p>Classic tic-tac-toe game with a simple and functional interface. Includes turn system and automatic win detection.</p>
+                    </div>
+                    <div class="skill-container">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Whack-A-Hans Moleman -->
+                <div class="card">
+                    <h3 class="es-content">Juego de Los Simpson</h3>
+                    <h3 class="en-content">The Simpsons Game</h3>
+                    <div class="project-image" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; max-height: 200px; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a;">
+                        <img src="/images/simpsons.jpt.png" alt="Whack-A-Hans screenshot" style="width: 100%; height: auto; object-fit: cover;"/>
+                    </div>
+                    <div class="es-content">
+                        <p>Juego inspirado en The Simpsons - una versión divertida del clásico "Whack-a-mole" con personajes de la serie.</p>
+                    </div>
+                    <div class="en-content">
+                        <p>Game inspired by The Simpsons - a fun version of the classic "Whack-a-mole" featuring characters from the series.</p>
+                    </div>
+                    <div class="skill-container">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Pokemon Battle Arena -->
+                <div class="card">
+                    <h3 class="es-content">Arena de Batalla Pokémon</h3>
+                    <h3 class="en-content">Pokémon Battle Arena</h3>
+                    <div class="project-image" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; max-height: 200px; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a;">
+                        <img src="/images/pokemon.jpt.png" alt="Pokemon Battle Arena screenshot" style="width: 100%; height: auto; object-fit: cover;"/>
+                    </div>
+                    <div class="es-content">
+                        <p>Aplicación que consume la API de Pokémon para crear un simulador de batallas con estadísticas y tipos reales de los personajes.</p>
+                    </div>
+                    <div class="en-content">
+                        <p>Application that consumes the Pokémon API to create a battle simulator with real character statistics and types.</p>
+                    </div>
+                    <div class="skill-container">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">API Integration</span>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Weekly Menu Planner -->
+                <div class="card">
+                    <h3 class="es-content">Planificador de Menú Semanal</h3>
+                    <h3 class="en-content">Weekly Menu Planner</h3>
+                    <div class="project-image" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; max-height: 200px; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a;">
+                        <img src="/images/menu.jpt.png" alt="Weekly Menu Planner screenshot" style="width: 100%; height: auto; object-fit: cover;"/>
+                    </div>
+                    <div class="es-content">
+                        <p>Aplicación para planificar comidas semanales con base de datos para almacenar recetas y opciones de filtrado.</p>
+                    </div>
+                    <div class="en-content">
+                        <p>Application for planning weekly meals with a database to store recipes and filtering options.</p>
+                    </div>
+                    <div class="skill-container">
+                        <span class="skill">React</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">CSS</span>
+                    </div>
+                </div>
+                
+                <!-- Project 5: CineStream -->
+                <div class="card">
+                    <h3 class="es-content">CineStream - Plataforma de Streaming</h3>
+                    <h3 class="en-content">CineStream - Streaming Platform</h3>
+                    <div class="project-image" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; max-height: 200px; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a;">
+                        <img src="/images/cinestream.jpt.png" alt="CineStream screenshot" style="width: 100%; height: auto; object-fit: cover;"/>
+                    </div>
+                    <div class="es-content">
+                        <p>Plataforma de streaming de películas y series con sistema de usuarios, catálogo y reproductor multimedia.</p>
+                    </div>
+                    <div class="en-content">
+                        <p>Movie and series streaming platform with user system, catalog and media player.</p>
+                    </div>
+                    <div class="skill-container">
+                        <span class="skill">Angular</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">Bootstrap</span>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Supercars -->
+                <div class="card">
+                    <h3 class="es-content">Supercars - Alquiler de Vehículos</h3>
+                    <h3 class="en-content">Supercars - Vehicle Rental</h3>
+                    <div class="project-image" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; max-height: 200px; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a;">
+                        <img src="/images/supercars.jpt.jpeg" alt="Supercars screenshot" style="width: 100%; height: auto; object-fit: cover;"/>
+                    </div>
+                    <div class="es-content">
+                        <p>Aplicación para alquiler de vehículos de lujo con sistema de reservas, catálogo de coches y gestión de usuarios.</p>
+                    </div>
+                    <div class="en-content">
+                        <p>Luxury vehicle rental application with reservation system, car catalog and user management.</p>
+                    </div>
+                    <div class="skill-container">
+                        <span class="skill">Angular</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">Bootstrap</span>
+                    </div>
+                </div>
+                
+                <!-- Project 7: Rick and Morty Explorer -->
+                <div class="card">
+                    <h3 class="es-content">Explorador de Rick y Morty</h3>
+                    <h3 class="en-content">Rick and Morty Explorer</h3>
+                    <div class="project-image" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; max-height: 200px; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a;">
+                        <img src="/images/rickmorty.jpt.jpeg" alt="Rick and Morty Explorer screenshot" style="width: 100%; height: auto; object-fit: cover;"/>
+                    </div>
+                    <div class="es-content">
+                        <p>Aplicación que consume la API de Rick y Morty para mostrar información detallada sobre personajes, episodios y localizaciones.</p>
+                    </div>
+                    <div class="en-content">
+                        <p>Application that consumes the Rick and Morty API to display detailed information about characters, episodes and locations.</p>
+                    </div>
+                    <div class="skill-container">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">API Integration</span>
+                    </div>
+                </div>
+                
+                <!-- Project 8: Pokemon Manager -->
+                <div class="card">
+                    <h3 class="es-content">Gestor de Pokémon</h3>
+                    <h3 class="en-content">Pokémon Manager</h3>
+                    <div class="project-image" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; max-height: 200px; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a;">
+                        <img src="/images/pokemonmanager.jpt.jpg" alt="Pokemon Manager screenshot" style="width: 100%; height: auto; object-fit: cover;"/>
+                    </div>
+                    <div class="es-content">
+                        <p>Sistema de gestión de Pokémon con capacidad para listar, crear, editar y eliminar entradas en una base de datos.</p>
+                    </div>
+                    <div class="en-content">
+                        <p>Pokémon management system with the ability to list, create, edit and delete entries in a database.</p>
+                    </div>
+                    <div class="skill-container">
+                        <span class="skill">PHP</span>
+                        <span class="skill">Symfony</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="grid-section">
+        <div class="container">
+            <h2 class="section-title es-content">Desciframe</h2>
+            <h2 class="section-title en-content">Decipher Me</h2>
+            
+            <div class="card">
+                <div class="es-content">
+                    <p class="text-center" style="margin-bottom: 20px;">Para obtener mis datos de contacto, deberás ganar una partida de tres en raya contra mi sistema de seguridad.</p>
+                </div>
+                <div class="en-content">
+                    <p class="text-center" style="margin-bottom: 20px;">To get my contact information, you must win a tic-tac-toe game against my security system.</p>
+                </div>
+                
+                <div id="tictactoe-game">
+                    <div class="game-status" id="game-status">¡Tu turno!</div>
+                    <div class="tictactoe-board">
+                        <div class="cell" data-index="0"></div>
+                        <div class="cell" data-index="1"></div>
+                        <div class="cell" data-index="2"></div>
+                        <div class="cell" data-index="3"></div>
+                        <div class="cell" data-index="4"></div>
+                        <div class="cell" data-index="5"></div>
+                        <div class="cell" data-index="6"></div>
+                        <div class="cell" data-index="7"></div>
+                        <div class="cell" data-index="8"></div>
+                    </div>
+                    <button id="reset-game" class="game-button">Reiniciar Juego</button>
+                </div>
+
+                <div id="contact-info" style="display: none; text-align: center; margin-top: 30px;">
+                    <div class="es-content">
+                        <h3 style="color: var(--accent-color);">¡Enhorabuena! Has vulnerado mi código de seguridad</h3>
+                        <p>Ahora puedes contactarme:</p>
+                    </div>
+                    <div class="en-content">
+                        <h3 style="color: var(--accent-color);">Congratulations! You've breached my security code</h3>
+                        <p>Now you can contact me:</p>
+                    </div>
+                    
+                    <div class="contact-profile">
+                        <div class="profile-image">
+                            <img src="/images/profile.jpt.png" alt="Mi Foto" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-color);">
+                        </div>
+                        <div class="contact-details">
+                            <p><strong>Nombre:</strong> EDWAR DAVID SAVEDRA</p>
+                            <p><strong>Email:</strong> EDWARDAVIDSAVEDRA@GMAIL.COM</p>
+                            <div class="social-contact-links">
+                                <a href="https://github.com/edwardavid" target="_blank" class="contact-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/edwar-david-savedra-calvopi%C3%B1a-614418313/" target="_blank" class="contact-link">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="es-content">
+                <p>© 2025 - Desarrollador Full Stack & Especialista en Ciberseguridad</p>
+                <p>Madrid, España</p>
+            </div>
+            <div class="en-content">
+                <p>© 2025 - Full Stack Developer & Cybersecurity Specialist</p>
+                <p>Madrid, Spain</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
