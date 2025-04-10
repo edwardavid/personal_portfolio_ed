@@ -14,11 +14,17 @@
     font-family: 'Courier New', monospace;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevenir desplazamiento horizontal */
+    max-width: 100vw; /* Asegurar que nada sea más ancho que la ventana */
+}
+
 body {
     background-color: var(--main-bg-color);
     color: var(--text-color);
-    overflow-x: hidden;
     line-height: 1.6;
+    position: relative; /* Para elementos absolutos dentro del body */
 }
 
 #language-toggle {
@@ -35,26 +41,33 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 #language-toggle:hover {
     background: rgba(0, 255, 157, 0.1);
+    transform: scale(1.05);
+    background-color: rgba(0, 255, 157, 0.2);
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
 }
 
 header {
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); /* Fix para iOS */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 nav {
@@ -94,6 +107,10 @@ nav a:hover {
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
+    padding: 0 10px; /* Evitar desbordamiento en pantallas pequeñas */
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word; /* Asegurar que las palabras largas se rompan */
 }
 
 .subtitle {
@@ -102,6 +119,9 @@ nav a:hover {
     margin-bottom: 40px;
     position: relative;
     z-index: 2;
+    padding: 0 10px; /* Evitar desbordamiento en pantallas pequeñas */
+    width: 100%;
+    max-width: 100%;
 }
 
 .animated-accent {
@@ -113,6 +133,8 @@ nav a:hover {
 .grid-section {
     padding: 100px 0;
     position: relative;
+    width: 100%;
+    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
 }
 
 .section-title {
@@ -120,12 +142,15 @@ nav a:hover {
     margin-bottom: 50px;
     text-align: center;
     color: var(--accent-color);
+    width: 100%;
+    padding: 0 10px; /* Añadir padding para prevenir desbordamiento */
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    width: 100%;
 }
 
 .card {
@@ -137,6 +162,7 @@ nav a:hover {
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    width: 100%; /* Asegurar que las tarjetas no sean más anchas que su contenedor */
 }
 
 .card:hover {
@@ -158,10 +184,12 @@ nav a:hover {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: var(--accent-color);
+    word-wrap: break-word; /* Permitir que las palabras largas se rompan */
 }
 
 .card p {
     margin-bottom: 15px;
+    word-wrap: break-word; /* Permitir que las palabras largas se rompan */
 }
 
 .skill-container {
@@ -188,6 +216,8 @@ nav a:hover {
     margin-top: 50px;
     font-family: 'Courier New', monospace;
     position: relative;
+    width: 100%; /* Asegurar que el terminal no sea más ancho que su contenedor */
+    overflow-x: auto; /* Permitir scroll horizontal si el contenido es demasiado ancho */
 }
 
 .terminal::before {
@@ -228,6 +258,7 @@ nav a:hover {
     height: 100%;
     z-index: 1;
     pointer-events: none;
+    overflow: hidden; /* Asegurarse de que los elementos flotantes no causen desbordamiento */
 }
 
 .floating-element {
@@ -348,6 +379,7 @@ footer {
     border-top: 1px solid var(--glass-border);
     position: relative;
     z-index: 5;
+    width: 100%;
 }
 
 .social-links {
@@ -490,17 +522,6 @@ body.show-en .en-content {
     height: auto;
 }
 
-/* Improve visibility for language toggle */
-#language-toggle {
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-#language-toggle:hover {
-    transform: scale(1.05);
-    background-color: rgba(0, 255, 157, 0.2);
-}
-
 /* Fallback styles */
 .no-js .es-content {
     display: block;
@@ -548,6 +569,8 @@ body.show-en .en-content {
     cursor: pointer;
     color: var(--text-color);
     transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent; /* Eliminar resaltado en tap para móviles */
+    touch-action: manipulation; /* Mejorar interacción táctil */
 }
 
 .cell:hover {
@@ -576,6 +599,7 @@ body.show-en .en-content {
     font-family: 'Courier New', monospace;
     display: block;
     margin: 0 auto;
+    -webkit-tap-highlight-color: transparent; /* Eliminar resaltado en tap para móviles */
 }
 
 .game-button:hover {
@@ -792,12 +816,19 @@ body.show-en .en-content {
         background: rgba(0, 0, 0, 0.3);
         border-color: var(--glass-border);
     }
+    
+    /* Mejorar experiencia táctil en tres en raya */
+    .cell:active {
+        background: rgba(0, 255, 157, 0.1);
+        border-color: var(--accent-color);
+    }
 }
 
 /* Ajustes para pantalla en modo vertical/horizontal */
 @media (orientation: portrait) {
     header {
         height: 90vh;
+        height: calc(var(--vh, 1vh) * 90); /* Fix para iOS */
     }
 }
 

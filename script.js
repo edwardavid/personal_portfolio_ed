@@ -159,16 +159,14 @@ document.addEventListener('DOMContentLoaded', function() {
             [0, 4, 8], [2, 4, 6]             // diagonales
         ];
         
-        function handleCellClick(clickedCellEvent) {
-            const clickedCell = clickedCellEvent.target;
-            const clickedCellIndex = parseInt(clickedCell.getAttribute('data-index'));
-            
-            if (gameState[clickedCellIndex] !== '' || !gameActive) {
+        // Función para manejar el clic o toque en una celda
+        function handleCellInteraction(index) {
+            if (gameState[index] !== '' || !gameActive) {
                 return;
             }
             
-            gameState[clickedCellIndex] = currentPlayer;
-            clickedCell.classList.add(currentPlayer);
+            gameState[index] = currentPlayer;
+            cells[index].classList.add(currentPlayer);
             
             if (checkWin()) {
                 gameStatus.textContent = getMessage('playerWin');
@@ -207,10 +205,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!gameActive) return;
             
             // Estrategia: el ordenador intenta perder
-            // Primero busca si puede bloquear una victoria del jugador
             let computerMoveIndex = -1;
             
-            // Primero, veamos si hay un movimiento que haría ganar al jugador
             // Primero, veamos si hay un movimiento que haría ganar al jugador
             for (let i = 0; i < gameState.length; i++) {
                 if (gameState[i] === '') {
@@ -310,17 +306,25 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Event listeners
-        cells.forEach(cell => {
-            cell.addEventListener('click', handleCellClick);
+        // Event listeners mejorados para dispositivos móviles
+        cells.forEach((cell, index) => {
+            // Solución al problema del click en dispositivos móviles
+            const processInteraction = (e) => {
+                e.preventDefault(); // Prevenir comportamiento por defecto
+                handleCellInteraction(index);
+            };
             
-            // Mejorar experiencia táctil
-            cell.addEventListener('touchstart', function(e) {
-                e.preventDefault(); // Previene zoom en algunos dispositivos
-            }, { passive: false });
+            // Añadir listeners para click (desktop) y touch (mobile)
+            cell.addEventListener('click', processInteraction);
+            cell.addEventListener('touchstart', processInteraction, { passive: false });
+            cell.addEventListener('touchend', (e) => e.preventDefault(), { passive: false });
         });
         
         resetButton.addEventListener('click', resetGame);
+        resetButton.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            resetGame();
+        }, { passive: false });
     }
 
     // Configurar el juego de tres en raya si existe en la página
